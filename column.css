@@ -4,6 +4,12 @@ body{
 	text-justify: inter-word;
 }
 
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .dropbtn {
     background-color: #571931;
@@ -90,6 +96,12 @@ body{
 	padding:10px;
 	float:left;
 }
+
+
+
+
+
+
 
 .menu{
 	float: right; 

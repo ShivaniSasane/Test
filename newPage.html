@@ -11,6 +11,78 @@ Test
 <script type="text/javascript src="EventHelpers.js"></script>
 <script type="text/javascript" src="config-2.0.js"></script>
 
+	<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+
+		<script> 
+		
+		
+		var var1;
+		
+		var1=window.location.hash.substring(1);
+		
+		var myFirebaseRef = new Firebase("https://testshivani.firebaseio.com/");
+		if(var1=="p1")
+		{
+			
+									
+			myFirebaseRef.child("news1").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("1").innerHTML=x;
+			});
+
+			myFirebaseRef.child("newsText").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("2").innerHTML=x;
+			});
+		
+		}
+		else if(var1=="p2")
+		{
+			myFirebaseRef.child("news2").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("1").innerHTML=x;
+			});
+
+			myFirebaseRef.child("newsText2").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("2").innerHTML=x;
+			});
+		}
+		else if(var1=="p3")
+		{
+			myFirebaseRef.child("news3").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("1").innerHTML=x;
+			});
+
+			myFirebaseRef.child("newsText3").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("2").innerHTML=x;
+			});
+		}
+		else if(var1=="p4")
+		{
+
+			myFirebaseRef.child("news4").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("1").innerHTML=x;
+			});
+
+			myFirebaseRef.child("newsText4").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("2").innerHTML=x;
+			});
+
+		}	
+		</script>
 
 </head>
 <body>
@@ -27,29 +99,12 @@ Test
 
 <div class="container" id="grad3" >
 	
-	<div class="border1">
-		<h3 align="center">Latest News</h3>
+	<div class="border1" style="height:auto;">
+		<h1 align="center">Latest News</h1>
 		
-					The Indian civilisation is one of the most ancient civilizations in the world. 
-					The Indus Valley Civilization, which dates back from 3300 to 1300 BCE, was one of the earliest civilizations in the region that now comprises the Indian subcontinent.
-					Over the years, India has been governed by different rulers and dynasties, finally culminating in the British Raj. 			
-					The Indian civilisation is one of the most ancient civilizations in the world. 
-					The Indus Valley Civilization, which dates back from 3300 to 1300 BCE, was one of the earliest civilizations in the region that now comprises the Indian subcontinent.
-					Over the years, India has been governed by different rulers and dynasties, finally culminating in the British Raj. 			
-					The Indian civilisation is one of the most ancient civilizations in the world. 
-					The Indus Valley Civilization, which dates back from 3300 to 1300 BCE, was one of the earliest civilizations in the region that now comprises the Indian subcontinent.
-					Over the years, India has been governed by different rulers and dynasties, finally culminating in the British Raj. 			
-					The Indian civilisation is one of the most ancient civilizations in the world. 
-					The Indus Valley Civilization, which dates back from 3300 to 1300 BCE, was one of the earliest civilizations in the region that now comprises the Indian subcontinent.
-					Over the years, India has been governed by different rulers and dynasties, finally culminating in the British Raj. 			
-					The Indian civilisation is one of the most ancient civilizations in the world. 
-					The Indus Valley Civilization, which dates back from 3300 to 1300 BCE, was one of the earliest civilizations in the region that now comprises the Indian subcontinent.
-					Over the years, India has been governed by different rulers and dynasties, finally culminating in the British Raj. 			
-					
-						<div class="read_more_link">Read More
-						</div>
-		
-		
+					<div id="1"></div><br>	
+					<div id="2"></div>	
+
 	</div>
 </div>
 
